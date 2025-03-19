@@ -1,0 +1,122 @@
+@font-face {
+    font-family:'Work Sans' ;
+    src: url(fonts/work-sans-v19-latin-regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url(fonts/work-sans-v19-latin-600.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url(fonts/work-sans-v19-latin-700.woff2);
+    font-weight: 700;
+}
+:root{ 
+--White: hsl(0, 0%, 100%);
+--Lightpink: hsl(275, 100%, 97%);
+--Grayishpurple: hsl(292, 16%, 49%);
+--Darkpurple: hsl(292, 42%, 14%);
+
+}
+body{
+    font-family: 'Work sans';
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Lightpink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img{
+    max-inline-size: 100%;
+    display: block;
+}
+
+.container{
+    background-color: var(--White);
+    inline-size: 550px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+
+
+}
+
+.container .heading{
+    display: flex;
+    gap: 20px;
+}
+h1{
+    font-weight: 700;
+}
+
+.container .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.container p {
+    color: hsla(292, 42%, 14%, 0.683);
+    font-size: 1rem;
+    font-weight: 500;
+  
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #cccccc68;
+    margin:  0;
+   
+}
+
+.container .question img{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+h4{
+    font-weight: 600;
+    &:hover{
+        color: #ad28eb;
+    }
+}
+
+@media (max-width: 565px) {
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+        background-repeat: no-repeat;
+    background-size: contain;
+    }
+    .container{
+        width: 400px;
+        padding-inline: 20px;
+    }
+    
+}
+@media (max-width: 400px) {
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+        background-repeat: no-repeat;
+    background-size: contain;
+    }
+    .container{
+        width: 350px;
+        padding-inline: 20px;
+    }
+    
+}
